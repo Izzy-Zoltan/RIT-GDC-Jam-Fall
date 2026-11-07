@@ -1,0 +1,342 @@
+[gd_scene format=3 uid="uid://enhml8shuriv"]
+
+[ext_resource type="Script" path="res://Scripts/Interface/UI.cs" id="1_ui"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/AirMeter.cs" id="3_air_meter"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/PowerupEffects.cs" id="5_powerup_effects"]
+[ext_resource type="FontFile" uid="uid://btrvgccqulh7e" path="res://assets/Tiny5-Regular.ttf" id="2_ro3t7"]
+
+; ── StyleBoxes ────────────────────────────────────────────────────────────────
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.08, 0.07, 0.2, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72, 0.43, 0.66, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gameover"]
+bg_color = Color(0.08, 0.06, 0.18, 0.98)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.95, 0.43, 0.58, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.15, 0.12, 0.31, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62, 0.43, 0.72, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.27, 0.2, 0.43, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1.0, 0.82, 0.42, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(1.0, 0.78, 0.35, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12, 0.08, 0.23, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_fill"]
+bg_color = Color(0.96, 0.52, 0.6, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_bg"]
+bg_color = Color(0.04, 0.05, 0.12, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.34, 0.27, 0.54, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+; Powerup countdown bar fill — orange for boost
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boost_fill"]
+bg_color = Color(1.0, 0.55, 0.15, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+; Powerup countdown bar fill — purple for score multiplier
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_score_fill"]
+bg_color = Color(0.75, 0.38, 1.0, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+; Thin countdown bar background
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_countdown_bg"]
+bg_color = Color(0.04, 0.04, 0.1, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.2, 0.4, 1.0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+; ── Scene ─────────────────────────────────────────────────────────────────────
+
+[node name="UI" type="Node2D" unique_id=1926287964]
+script = ExtResource("1_ui")
+
+[node name="AirMeter" type="Node" parent="." unique_id=1001000080]
+script = ExtResource("3_air_meter")
+
+[node name="PowerupEffects" type="Node" parent="AirMeter" unique_id=1001000082]
+script = ExtResource("5_powerup_effects")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1169984950]
+
+; ── Top-left HUD ──────────────────────────────────────────────────────────────
+[node name="HudPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1001000001]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 310.0
+offset_bottom = 116.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HudPanel" unique_id=1310838362]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="AirRow" type="HBoxContainer" parent="CanvasLayer/HudPanel/VBoxContainer" unique_id=1001000010]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="CanvasLayer/HudPanel/VBoxContainer/AirRow" unique_id=1013610980]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(1.0, 0.82, 0.45, 1.0)
+text = "AIR"
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/HudPanel/VBoxContainer/AirRow" unique_id=1554482903]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_minimum_size = Vector2(0, 16)
+value = 100.0
+show_percentage = false
+theme_override_styles/fill = SubResource("StyleBoxFlat_bar_fill")
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/HudPanel/VBoxContainer" unique_id=1309713541]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.88, 0.85, 1.0, 1.0)
+text = "SCORE: 000000"
+
+; ── Top-right combo ────────────────────────────────────────────────────────────
+[node name="ComboPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1001000020]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 58.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ComboLabel" type="Label" parent="CanvasLayer/ComboPanel" unique_id=240221912]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1.0, 0.82, 0.42, 1.0)
+text = "COMBO x0"
+horizontal_alignment = 2
+
+; ── Powerup status panel (right side, below combo) ────────────────────────────
+[node name="PowerupPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1001000050]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 68.0
+offset_right = -12.0
+offset_bottom = 68.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="PowerupRows" type="VBoxContainer" parent="CanvasLayer/PowerupPanel" unique_id=1001000051]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+; Boost row
+[node name="BoostRow" type="VBoxContainer" parent="CanvasLayer/PowerupPanel/PowerupRows" unique_id=1001000060]
+layout_mode = 2
+visible = false
+theme_override_constants/separation = 2
+
+[node name="BoostLabel" type="Label" parent="CanvasLayer/PowerupPanel/PowerupRows/BoostRow" unique_id=1001000061]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1.0, 0.65, 0.2, 1.0)
+text = "BOOST  1.8s"
+horizontal_alignment = 2
+
+[node name="BoostBar" type="ProgressBar" parent="CanvasLayer/PowerupPanel/PowerupRows/BoostRow" unique_id=1001000062]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 7)
+value = 100.0
+show_percentage = false
+theme_override_styles/fill = SubResource("StyleBoxFlat_boost_fill")
+theme_override_styles/background = SubResource("StyleBoxFlat_countdown_bg")
+
+; Score multiplier row
+[node name="ScoreMultRow" type="VBoxContainer" parent="CanvasLayer/PowerupPanel/PowerupRows" unique_id=1001000070]
+layout_mode = 2
+visible = false
+theme_override_constants/separation = 2
+
+[node name="ScoreMultLabel" type="Label" parent="CanvasLayer/PowerupPanel/PowerupRows/ScoreMultRow" unique_id=1001000071]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.82, 0.5, 1.0, 1.0)
+text = "2x SCORE  8.0s"
+horizontal_alignment = 2
+
+[node name="ScoreMultBar" type="ProgressBar" parent="CanvasLayer/PowerupPanel/PowerupRows/ScoreMultRow" unique_id=1001000072]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 7)
+value = 100.0
+show_percentage = false
+theme_override_styles/fill = SubResource("StyleBoxFlat_score_fill")
+theme_override_styles/background = SubResource("StyleBoxFlat_countdown_bg")
+
+; ── Game Over panel ────────────────────────────────────────────────────────────
+[node name="GameOverPanel" type="PanelContainer" parent="CanvasLayer" unique_id=2137682200]
+visible = false
+custom_minimum_size = Vector2(520, 340)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gameover")
+
+[node name="PanelContents" type="VBoxContainer" parent="CanvasLayer/GameOverPanel" unique_id=511469923]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="GameOverTitle" type="Label" parent="CanvasLayer/GameOverPanel/PanelContents" unique_id=876211625]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1.0, 0.78, 0.42, 1.0)
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Divider" type="HSeparator" parent="CanvasLayer/GameOverPanel/PanelContents" unique_id=1001000030]
+layout_mode = 2
+theme_override_colors/separator_color = Color(0.95, 0.43, 0.58, 0.65)
+
+[node name="FinalScoreLabel" type="Label" parent="CanvasLayer/GameOverPanel/PanelContents" unique_id=1320534284]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.88, 0.85, 1.0, 1.0)
+text = "SCORE: 000000"
+horizontal_alignment = 1
+
+[node name="MaxComboLabel" type="Label" parent="CanvasLayer/GameOverPanel/PanelContents" unique_id=1361447480]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1.0, 0.82, 0.42, 1.0)
+text = "MAX COMBO: x0"
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="CanvasLayer/GameOverPanel/PanelContents" unique_id=1001000040]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/GameOverPanel/PanelContents/ButtonRow" unique_id=760100481]
+custom_minimum_size = Vector2(180, 44)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.92, 0.87, 1.0, 1.0)
+theme_override_colors/font_hover_color = Color(1.0, 0.84, 0.46, 1.0)
+theme_override_colors/font_pressed_color = Color(0.12, 0.08, 0.23, 1.0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "RESTART"
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/GameOverPanel/PanelContents/ButtonRow" unique_id=1133158406]
+custom_minimum_size = Vector2(180, 44)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ro3t7")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.92, 0.87, 1.0, 1.0)
+theme_override_colors/font_hover_color = Color(1.0, 0.84, 0.46, 1.0)
+theme_override_colors/font_pressed_color = Color(0.12, 0.08, 0.23, 1.0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "MAIN MENU"

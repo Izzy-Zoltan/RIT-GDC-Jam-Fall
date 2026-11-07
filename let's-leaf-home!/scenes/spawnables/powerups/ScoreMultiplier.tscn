@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bhw4b6lqhxct7"]
+
+[ext_resource type="Script" uid="uid://bq6m2npm6dgbx" path="res://Scripts/Instantiables/Powerup.cs" id="1_powerup"]
+[ext_resource type="Texture2D" uid="uid://powerup_score2x" path="res://assets/powerup/2x score.png" id="2_tex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_powerup"]
+radius = 38.0
+
+[node name="ScoreMultiplier" type="Area2D" unique_id=2113637950]
+script = ExtResource("1_powerup")
+Kind = 1
+Duration = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1617670943]
+scale = Vector2(0.18, 0.18)
+texture_filter = 1
+texture = ExtResource("2_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=293201279]
+shape = SubResource("CircleShape2D_powerup")

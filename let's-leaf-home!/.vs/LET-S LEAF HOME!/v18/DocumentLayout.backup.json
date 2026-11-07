@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\instantiables\\flyinghazard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\instantiables\\flyinghazard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\instantiables\\airring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\instantiables\\airring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\spawnposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\spawnposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\scoresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\scoresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\powerupeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\powerupeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|c:\\users\\izzyz\\documents\\let\u0027s-leaf-home!\\scripts\\gameplay\\airmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CA66ED4-F259-4EBD-A1A1-B24F76DD9792}|Let-s Leaf Home!.csproj|solutionrelative:scripts\\gameplay\\airmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlyingHazard.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Instantiables\\FlyingHazard.cs",
+              "RelativeDocumentMoniker": "Scripts\\Instantiables\\FlyingHazard.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Instantiables\\FlyingHazard.cs",
+              "RelativeToolTip": "Scripts\\Instantiables\\FlyingHazard.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAUwMYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:45:48.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpawnPosition.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\SpawnPosition.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\SpawnPosition.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\SpawnPosition.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\SpawnPosition.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:45:02.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Spawner.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\Spawner.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\Spawner.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\Spawner.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\Spawner.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwHAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:43:10.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScoreSystem.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\ScoreSystem.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\ScoreSystem.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\ScoreSystem.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\ScoreSystem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:37:03.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PowerupEffects.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\PowerupEffects.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\PowerupEffects.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\PowerupEffects.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\PowerupEffects.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:36:55.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerControl.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\PlayerControl.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\PlayerControl.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\PlayerControl.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\PlayerControl.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAuwFQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:31:28.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AirRing.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Instantiables\\AirRing.cs",
+              "RelativeDocumentMoniker": "Scripts\\Instantiables\\AirRing.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Instantiables\\AirRing.cs",
+              "RelativeToolTip": "Scripts\\Instantiables\\AirRing.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAwGEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:17:06.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AirMeter.cs",
+              "DocumentMoniker": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\AirMeter.cs",
+              "RelativeDocumentMoniker": "Scripts\\Gameplay\\AirMeter.cs",
+              "ToolTip": "C:\\Users\\izzyz\\Documents\\let\u0027s-leaf-home!\\Scripts\\Gameplay\\AirMeter.cs",
+              "RelativeToolTip": "Scripts\\Gameplay\\AirMeter.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAkwE0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T19:15:26.832Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

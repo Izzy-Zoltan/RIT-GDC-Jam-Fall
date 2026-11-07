@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://3iwcwt6m5ic5" path="res://Scripts/Instantiables/FlyingHazard.cs" id="1_hazard"]
+[ext_resource type="Texture2D" uid="uid://lud5wcqqd1gs" path="res://assets/stop sign obstacle.png" id="2_circle"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hazard"]
+radius = 75.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pole"]
+size = Vector2(18, 533)
+
+[node name="StopSignHazard" type="Area2D"]
+script = ExtResource("1_hazard")
+RadiusMin = 60.0
+RadiusMax = 75.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_circle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hazard")
+
+[node name="PoleCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 341.7)
+shape = SubResource("RectangleShape2D_pole")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7ef0jcggvxhu"
+path="res://.godot/imported/wind_ring.mp3-9b0bc3aa4dfd5c5111eb1f70b95bf5b6.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound Effects/wind_ring.mp3"
+dest_files=["res://.godot/imported/wind_ring.mp3-9b0bc3aa4dfd5c5111eb1f70b95bf5b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

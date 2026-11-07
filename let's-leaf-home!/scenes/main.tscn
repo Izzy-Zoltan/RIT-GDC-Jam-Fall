@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ctxs7msdxpw7e"]
+
+[ext_resource type="PackedScene" uid="uid://cjkrr67n08muh" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://b26nkydkx528t" path="res://Scripts/Gameplay/Spawner.cs" id="2_spawner"]
+[ext_resource type="PackedScene" uid="uid://dkg7bcitns00p" path="res://scenes/spawnables/Wind_Ring.tscn" id="3_ring"]
+[ext_resource type="PackedScene" uid="uid://enhml8shuriv" path="res://scenes/UI.tscn" id="4_ui"]
+[ext_resource type="PackedScene" path="res://scenes/spawnables/hazards/StopSignHazard.tscn" id="5_stop_sign_hazard"]
+[ext_resource type="PackedScene" uid="uid://b227m5uqu7r26" path="res://scenes/spawnables/powerups/Boost.tscn" id="7_boost_powerup"]
+[ext_resource type="PackedScene" uid="uid://bhw4b6lqhxct7" path="res://scenes/spawnables/powerups/ScoreMultiplier.tscn" id="8_score_powerup"]
+[ext_resource type="PackedScene" uid="uid://c1pnwep7g1ucu" path="res://scenes/spawnables/powerups/MaxAir.tscn" id="9_max_air_powerup"]
+[ext_resource type="PackedScene" uid="uid://dow1bdsdohrfa" path="res://scenes/Background.tscn" id="10_background"]
+
+[node name="Main" type="Node2D" unique_id=368482806]
+
+[node name="Background" parent="." unique_id=2021468680 instance=ExtResource("10_background")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1001000050]
+position = Vector2(576, 324)
+
+[node name="Spawnables" type="Node2D" parent="." unique_id=1717374654]
+
+[node name="Player" parent="." unique_id=157029267 instance=ExtResource("1_player")]
+position = Vector2(576, 324)
+
+[node name="Spawnable Spawner" type="Node2D" parent="." unique_id=1700572168]
+script = ExtResource("2_spawner")
+SpawnableScene = ExtResource("3_ring")
+StopSignHazardScene = ExtResource("5_stop_sign_hazard")
+BoostPowerupScene = ExtResource("7_boost_powerup")
+ScoreMultiplierPowerupScene = ExtResource("8_score_powerup")
+MaxAirPowerupScene = ExtResource("9_max_air_powerup")
+
+[node name="PowerupTimer" type="Timer" parent="Spawnable Spawner" unique_id=416411672]
+
+[node name="SpawnTimer" type="Timer" parent="Spawnable Spawner" unique_id=226641774]
+
+[node name="HazardTimer" type="Timer" parent="Spawnable Spawner" unique_id=1651992280]
+
+[node name="UI" parent="." unique_id=892607011 instance=ExtResource("4_ui")]

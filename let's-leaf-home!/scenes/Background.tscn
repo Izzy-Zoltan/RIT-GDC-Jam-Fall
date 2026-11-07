@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dow1bdsdohrfa"]
+
+[ext_resource type="Texture2D" uid="uid://bne01n6ocfovq" path="res://assets/untitled-pixel-art6x.png" id="1_background"]
+
+[node name="Background" type="CanvasLayer" unique_id=1779432871]
+layer = -1
+
+[node name="BackgroundTexture" type="TextureRect" parent="." unique_id=1001000052]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("1_background")
+expand_mode = 1
+stretch_mode = 6

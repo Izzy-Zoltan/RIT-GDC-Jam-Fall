@@ -1,0 +1,381 @@
+[gd_scene format=3 uid="uid://eudbx8ptm0fj"]
+
+[ext_resource type="Script" uid="uid://by71qrko0q223" path="res://Scripts/Interface/MainMenu.cs" id="1_menu"]
+[ext_resource type="FontFile" uid="uid://btrvgccqulh7e" path="res://assets/Tiny5-Regular.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://bne01n6ocfovq" path="res://assets/untitled-pixel-art6x.png" id="3_bg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxFlat_title_bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(0.12, 0.09, 0.28, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.82, 0.42, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.8, 0.3, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.07, 0.22, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(0.28, 0.2, 0.5, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.93, 0.55, 1)
+
+[node name="Menu" type="Node2D" unique_id=1349898723]
+script = ExtResource("1_menu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=456004465]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=2075986091]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1396247410]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -36.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=1414299737]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="FramePanel" type="PanelContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1001000001]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_title_bg")
+
+[node name="TitleBox" type="VBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer/FramePanel" unique_id=1001000003]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/FramePanel/TitleBox" unique_id=1154133294]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.05, 0.03, 0.12, 0.85)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 64
+text = "LET'S LEAF"
+horizontal_alignment = 1
+
+[node name="TitleAccent" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/FramePanel/TitleBox" unique_id=1001000004]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.36, 1)
+theme_override_colors/font_shadow_color = Color(0.05, 0.03, 0.12, 0.85)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 64
+text = "HOME!"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1999133563]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.78, 1, 0.9)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 18
+text = "The Video Game!!"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=324865202]
+custom_minimum_size = Vector2(260, 58)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0.38, 1)
+theme_override_colors/font_pressed_color = Color(0.1, 0.07, 0.22, 1)
+theme_override_colors/font_hover_color = Color(1, 0.95, 0.6, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "START"
+
+[node name="HelpButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=465152863]
+custom_minimum_size = Vector2(260, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.84, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.95, 0.6, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "HELP"
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=835472883]
+custom_minimum_size = Vector2(260, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.84, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.95, 0.6, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "CREDITS"
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1940823165]
+custom_minimum_size = Vector2(260, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.84, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.95, 0.6, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_normal")
+text = "EXIT"
+
+[node name="HelpOverlay" type="Control" parent="CanvasLayer" unique_id=957140280]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="CanvasLayer/HelpOverlay" unique_id=1727678719]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.01, 0.08, 0.78)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/HelpOverlay" unique_id=1221816288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/HelpOverlay/CenterContainer" unique_id=1751072739]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_title_bg")
+
+[node name="Content" type="VBoxContainer" parent="CanvasLayer/HelpOverlay/CenterContainer/Panel" unique_id=934176265]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="CanvasLayer/HelpOverlay/CenterContainer/Panel/Content" unique_id=1563471315]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.36, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 38
+text = "HOW TO PLAY!"
+horizontal_alignment = 1
+
+[node name="Instructions" type="Label" parent="CanvasLayer/HelpOverlay/CenterContainer/Panel/Content" unique_id=1179560349]
+custom_minimum_size = Vector2(500, 190)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.88, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 22
+text = "Move with WASD or arrow keys.
+Fly through the center of air rings to refill your air.
+Pass completely through a ring to earn air and build your combo.
+Avoid stop signs and make sure to always have air, or else you lose!
+Collect powerups for a boost, double score, or max air.
+Your score increases for as long as you stay in the air."
+autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/HelpOverlay/CenterContainer/Panel/Content" unique_id=962434156]
+custom_minimum_size = Vector2(220, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.84, 0.38, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "BACK"
+
+[node name="CreditsOverlay" type="Control" parent="CanvasLayer" unique_id=761410668]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="CanvasLayer/CreditsOverlay" unique_id=1947038535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.01, 0.08, 0.78)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/CreditsOverlay" unique_id=2040712892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/CreditsOverlay/CenterContainer" unique_id=1399204156]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_title_bg")
+
+[node name="Content" type="VBoxContainer" parent="CanvasLayer/CreditsOverlay/CenterContainer/Panel" unique_id=2020932869]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="CanvasLayer/CreditsOverlay/CenterContainer/Panel/Content" unique_id=1897814772]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.36, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 38
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="CreditText" type="Label" parent="CanvasLayer/CreditsOverlay/CenterContainer/Panel/Content" unique_id=403818775]
+custom_minimum_size = Vector2(440, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.88, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "LET'S LEAF HOME!
+
+Programmer: Izzy Zoltan
+Artist: Krisha Amim
+
+Music:
+scratchonix from Pixabay  
+Yodguard from Pixabay by 
+universfield from Pixabay 
+musicnation from Pixabay
+Music by kissan4 from Pixabay"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/CreditsOverlay/CenterContainer/Panel/Content" unique_id=1024429375]
+custom_minimum_size = Vector2(220, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.84, 0.38, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "BACK"
+
+[node name="ExitOverlay" type="Control" parent="CanvasLayer" unique_id=1786111516]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="CanvasLayer/ExitOverlay" unique_id=1100066926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.01, 0.08, 0.78)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ExitOverlay" unique_id=2055194514]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/ExitOverlay/CenterContainer" unique_id=29521575]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_title_bg")
+
+[node name="Content" type="VBoxContainer" parent="CanvasLayer/ExitOverlay/CenterContainer/Panel" unique_id=1243121947]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CanvasLayer/ExitOverlay/CenterContainer/Panel/Content" unique_id=365183588]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.36, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "ARE YOU SURE?"
+horizontal_alignment = 1
+
+[node name="ExitButtons" type="HBoxContainer" parent="CanvasLayer/ExitOverlay/CenterContainer/Panel/Content" unique_id=626870839]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="CanvasLayer/ExitOverlay/CenterContainer/Panel/Content/ExitButtons" unique_id=1220003285]
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.84, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "CANCEL"
+
+[node name="ConfirmButton" type="Button" parent="CanvasLayer/ExitOverlay/CenterContainer/Panel/Content/ExitButtons" unique_id=437411426]
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.46, 0.42, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "EXIT"
